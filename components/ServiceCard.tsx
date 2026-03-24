@@ -82,6 +82,7 @@ type Props = {
   duration: string
   icon?: 'cut' | 'shave' | 'style' | 'crown' | 'coloring' | 'baby' | 'droplets' | 'face' | 'beard' | 'shavette' | 'barbercut' | 'razor' | 'outlinedbeard' | 'haircutbarber' | 'moustache'
   highlighted?: boolean
+  badge?: string
 }
 
 const iconMap = {

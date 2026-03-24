@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone } from 'lucide-react'
+import { MapPin, Clock, Phone, CreditCard } from 'lucide-react'
 
 export default function InfoTabs() {
   const infoSections = [
@@ -48,11 +48,23 @@ export default function InfoTabs() {
           </div>
         </div>
       )
+    },
+    {
+      id: 'payment',
+      label: 'Platba',
+      icon: CreditCard,
+      content: (
+        <div className="text-center">
+          <p className="text-base-muted text-sm">
+            Platba hotově nebo kartou.
+          </p>
+        </div>
+      )
     }
   ]
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {infoSections.map((section) => {
         const Icon = section.icon
         return (

@@ -58,7 +58,7 @@ export default function GallerySlider({ images, className }: Props) {
               src={src}
               alt={`Showcase image ${pageStartIndex + idx + 1}`}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-cover transition-transform duration-300 group-hover:scale-105 grayscale"
               sizes="(min-width: 768px) 33vw, 33vw"
             />
           </div>

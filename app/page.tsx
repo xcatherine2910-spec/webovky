@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { Bebas_Neue } from 'next/font/google'
 import GallerySlider from '@/components/GallerySlider'
 import MoustacheIcon from '@/components/ServiceCard'
+import { Gift } from 'lucide-react'
 
 
 const fade = MoustacheIcon
@@ -37,7 +38,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="container mx-auto min-h-[70dvh] md:min-h-[80dvh] flex flex-col items-center justify-center text-center">
-          <h1 className={`mt-3 ${bebas.className} text-7xl md:text-9xl text-white tracking-tight glitch`} data-text="DARK BARBERSHOP">DARK BARBERSHOP</h1>
+          <h1 className={`mt-3 ${bebas.className} text-7xl md:text-9xl text-white tracking-tight`}>DARK BARBERSHOP</h1>
           <p className={`mt-1 ${bebas.className} text-3xl md:text-4xl text-white/90 tracking-[0.2em]`}>
             LETOVICE
           </p>
@@ -61,40 +62,65 @@ export default function HomePage() {
         <Section id="services" title="Služby" titleClassName={`text-center ${bebas.className} text-5xl md:text-6xl`}>
           <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 md:gap-6">
             <FadeIn delay={0.1} direction="left">
-              <ServiceCard title="Klasický střih" price="350 Kč" description="Základní střih zahrnující mytí, masáž hlavy, styling, kolínská." duration="45 minut" icon="cut" />
+              <ServiceCard title="Klasický střih" price="350 Kč" description="Základní střih zahrnující mytí, masáž hlavy, styling, kolínská." duration="30 minut" icon="cut" />
             </FadeIn>
             <FadeIn delay={0.2} direction="up">
-              <ServiceCard title="Skin fade" price="450 Kč" description="Moderní střih s výrazným přechodem na kůži, mytí vlasů, masáž hlavy, foukaná, styling, kolínská." duration="60 minut" icon="cut" />
+              <ServiceCard title="Skin fade" price="450 Kč" description="Moderní střih s výrazným přechodem na kůži, mytí vlasů, masáž hlavy, foukaná, styling, kolínská." duration="45 minut" icon="cut" />
             </FadeIn>
             <FadeIn delay={0.3} direction="right">
-              <ServiceCard title="Úprava vousů" price="300 Kč" description="Kontury a zastřižení vousů strojkem, mytí vousů, úprava obočí, olejíček na vousy + kolínská." duration="30 minut" icon="moustache" />
+              <ServiceCard title="Úprava vousů" price="250 Kč" description="Kontury a zastřižení vousů strojkem, mytí vousů, úprava obočí, olejíček na vousy + kolínská." duration="30 minut" icon="moustache" />
             </FadeIn>
             <FadeIn delay={0.4} direction="left">
-              <ServiceCard title="Hot towel shave" price="380 Kč" description="Tradiční holení břitvou s metodou horkého ručníku, hydratační balzám/olejíček, masáž hlavy a krku, kolínská." duration="45 minut" icon="droplets" />
+              <ServiceCard title="Hot towel shave" price="380 Kč" description="Tradiční holení břitvou s metodou horkého ručníku, hydratační balzám/olejíček, masáž hlavy a krku, kolínská." duration="30 minut" icon="moustache" />
             </FadeIn>
             <FadeIn delay={0.5} direction="up">
-              <ServiceCard title="Dětský střih" price="300 Kč" description="Pro děti do 12 let, zahrnuje mytí, střih a jednoduchý styling." duration="45 minut" icon="baby" />
+              <ServiceCard title="Dětský střih" price="300 Kč" description="Pro děti do 12 let, zahrnuje mytí, střih a jednoduchý styling." duration="30 minut" icon="baby" />
             </FadeIn>
             <FadeIn delay={0.6} direction="right">
-              <ServiceCard title="Barvení vlasů/vousů" price="650 Kč" description="Profesionální barvení pro změnu nebo zakrytí šedin." duration="60 minut" icon="coloring" />
+              <ServiceCard title="Barvení vlasů/vousů" price="650 - 850 Kč" description="Barvení vlasů/vousů pro změnu nebo zakrytí šedin, melír nebo úplné odbarvení vlasů + tónování." duration="60 - 120 minut" icon="coloring" />
+            </FadeIn>
+            <FadeIn delay={0.8} direction="left">
+              <ServiceCard title="Hard wax - depilace voskem" price="50 Kč" description="Odstranění chloupků pomocí vosku. Ideální pro úpravu detailů jako jsou nos, uši, nebo kontury obočí." duration="15 minut" icon="droplets" />
             </FadeIn>
             <FadeIn delay={0.7} direction="left">
-              <ServiceCard title="Dark full experience" price="900 Kč" description="Střih, úprava vousů/obočí, horký ručník a masáž hlavy + čištění pleti, hydratace a black mask." duration="120 minut" icon="crown" highlighted={true} />
+              <ServiceCard title="Dark full experience" price="900 Kč" description="Dopřejte si maximální servis v jednom. Služba zahrnuje střih vlasů dle vašeho výběru, úpravu vousů klasicky nebo břitvou (hot towel shave), dále čištění, hydrataci a masáž obličeje, černou slupovací masku a hloubkově čisticí masku pro dokonale svěží pleť. Celý zážitek zakončí relaxační masáž hlavy a krku, která vám dopřeje zasloužený odpočinek.
+
+Ideální volba pro muže, kteří chtějí perfektní vzhled i chvíli relaxu." duration="120 minut" icon="crown" highlighted={true} />
             </FadeIn>
           </div>
         </Section>
       </FadeIn>
 
-      
+      {/* Gift Vouchers */}
+      <FadeIn delay={0.9}>
+        <section className="container mx-auto py-8 md:py-12">
+          <div className="text-center">
+            <h3 className={`${bebas.className} text-white text-4xl md:text-5xl mb-6 flex items-center justify-center gap-2`}>
+              <Gift className="w-8 h-8 text-yellow-400" />
+              Dárkové poukazy
+            </h3>
+            <p className="text-base-muted text-sm leading-relaxed mb-8">Kupte dárkový poukaz a potěšte své blízké jedinečným zážitkem v našem salonu.</p>
+            <Image
+              src="/poukaz2.png"
+              alt="Dárkový poukaz"
+              width={500}
+              height={375}
+              className="mx-auto mt-4 rounded-lg hover:scale-110 transition-transform duration-300"
+              style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.5)' }}
+            />
+            <p className="text-base-muted text-sm leading-relaxed mt-8 italic">K vyzvednutí na místě nebo zaslání elektronicky. Pro objednání poukazu nám napište na e-mail info@darksalon.cz.</p>
+          </div>
+        </section>
+      </FadeIn>
 
       {/* Showcase Gallery (Interactive 3x3 slider) */}
       <FadeIn delay={0.4}>
         <Section id="testimonials" title="Ukázka prací" kicker="galerie" titleClassName={bebas.className}>
           <GallerySlider
             images={[
-              '/A4E0EC6F-1B67-4F0C-9BBA-4A96C6DDF16C.jpg',
-              '/AB7A43EB-D93F-475B-8DCB-85172C03E88E.jpg',
-              '/F36FE2E1-0795-4BBF-A295-892FAB8752CE.jpg',
+              '/pics1.png',
+              '/pics2.png',
+              '/pics3.png',
               '/IMG_0872.png',
               '/IMG_0225_jpg.jpg',
               '/IMG_0372_jpg.jpg',

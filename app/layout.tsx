@@ -9,17 +9,17 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 
 export const metadata: Metadata = {
   title: {
-    default: 'Dark Barber Salon Letovice',
-    template: '%s · Dark Barber Salon Letovice',
+    default: 'DARK Barbershop | Letovice',
+    template: '%s · DARK Barbershop | Letovice',
   },
-  description: 'Moderní holičství v Letovicích. Přesné střihy, čisté fade, tradiční holení britvou. Profesionální služby holičství v srdci města.',
+  description: 'Moderní holičství v Letovicích. Kompletní holičské služby. Pánské i dětské střihy, úprava vousů, barvení vlasů, depilace voskem...',
   keywords: ['holičství', 'letovice', 'střihy vlasů', 'holení britvou', 'barbershop', 'moderní holičství', 'fade', 'vousy'],
   metadataBase: new URL('https://dark-barbershop-letovice.netlify.app'),
   openGraph: {
-    title: 'Dark Barber Salon Letovice',
+    title: 'DARK Barbershop | Letovice',
     description: 'Moderní holičství v Letovicích. Přesné střihy, čisté fade, tradiční holení britvou.',
     url: 'https://dark-barbershop-letovice.netlify.app',
-    siteName: 'Dark Barber Salon Letovice',
+    siteName: 'DARK Barbershop | Letovice',
     images: [
       {
         url: '/barbershop-bg.jpg',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dark Barber Salon Letovice',
+    title: 'DARK Barbershop | Letovice',
     description: 'Moderní holičství v Letovicích. Přesné střihy, čisté fade, tradiční holení britvou.',
     images: ['/barbershop-bg.jpg'],
   },
